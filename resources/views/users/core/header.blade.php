@@ -16,9 +16,9 @@
                         </div>
                         <div class="col-lg-9 d-flex justify-content-end">
                             <ul class="user-info-block">
-                                <li><a href="my-account.html"><i class="fa fa-user-circle"></i> My Account</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-credit-card"></i> Checkout</a></li>
-                                <li><a href="login-register.html"><i class="fa fa-sign-in"></i> Sign In</a></li>
+                                <li><a href="{{ url('Profile') }}"><i class="fa fa-user-circle"></i> My Account</a></li>
+                                <li><a href="{{ url('Checkout') }}"><i class="fa fa-credit-card"></i> Checkout</a></li>
+                                <li><a href="{{ url('Account') }}"><i class="fa fa-sign-in"></i> Sign In</a></li>
                             </ul>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                                                 </ul>
                                                 <div class="minicart-button">
                                                     <a href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i> View Cart</a>
-                                                    <a href="cart.html"><i class="fa fa-share"></i> Checkout</a>
+                                                    <a href="{{ url('Checkout') }}"><i class="fa fa-share"></i> Checkout</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="mobile-menu-toggler">
                                 <div class="mini-cart-wrap">
-                                    <a href="cart.html">
+                                    <a href="{{ url('Cart') }}">
                                         <i class="fa fa-shopping-cart"></i>
                                         <div class="notification">0</div>
                                     </a>
@@ -219,9 +219,9 @@
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="myaccount">
-                                        <a class="dropdown-item" href="my-account.html">my account</a>
-                                        <a class="dropdown-item" href="login-register.html"> login</a>
-                                        <a class="dropdown-item" href="login-register.html">register</a>
+                                        <a class="dropdown-item" href="{{ url('Profile') }}">my account</a>
+                                        <a class="dropdown-item" href="{{ url('Account') }}"> login</a>
+                                        <a class="dropdown-item" href="{{ url('Account') }}">register</a>
                                     </div>
                                 </div>
                             </li>

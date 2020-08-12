@@ -17,7 +17,7 @@
                                 <div class="hero-slider-content content-top slide-1">
                                     <h2 class="slide-title">New</h2>
                                     <h3 class="slide-subtitle">Sports Sneakers <span>Men's like Flex</span></h3>
-                                    <a href="shop.html" class="btn btn-large">Shop Now</a>
+                                    <a href="{{ url('Shop') }}" class="btn btn-large">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                                 <div class="hero-slider-content content-top slide-2">
                                     <h2 class="slide-title">Sale</h2>
                                     <h3 class="slide-subtitle">Running Sneakers <span>Men's like Flex</span></h3>
-                                    <a href="shop.html" class="btn btn-large">Shop Now</a>
+                                    <a href="{{ url('Shop') }}" class="btn btn-large">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -107,15 +107,15 @@
                 <div class="col-md-4 banner-item mt-30">
                     <div class="single-category-item">
                         <div class="category-title">
-                            <a href="shop.html">MEN</a>
+                            <a href="{{ url('Shop') }}">MEN</a>
                         </div>
                         <div class="category-thumb">
-                            <a href="shop.html">
+                            <a href="{{ url('Shop') }}">
                                 <img src="assets/img/category/category-1.png" alt="category thumb">
                             </a>
                         </div>
                         <div class="shop-collection text-center">
-                            <a class="shop-btn" href="shop.html">Shop Collections</a>
+                            <a class="shop-btn" href="{{ url('Shop') }}">Shop Collections</a>
                         </div>
                     </div>
                 </div>
@@ -129,30 +129,30 @@
                 <div class="col-md-4 banner-item mt-30">
                     <div class="single-category-item">
                         <div class="category-title">
-                            <a href="shop.html">MEN</a>
+                            <a href="{{ url('Shop') }}">MEN</a>
                         </div>
                         <div class="category-thumb">
-                            <a href="shop.html">
+                            <a href="{{ url('Shop') }}">
                                 <img src="assets/img/category/category-3.png" alt="category thumb">
                             </a>
                         </div>
                         <div class="shop-collection text-center">
-                            <a class="shop-btn" href="shop.html">Shop Collections</a>
+                            <a class="shop-btn" href="{{ url('Shop') }}">Shop Collections</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 banner-item mt-30">
                     <div class="single-category-item">
                         <div class="category-title">
-                            <a href="shop.html">MEN</a>
+                            <a href="{{ url('Shop') }}">MEN</a>
                         </div>
                         <div class="category-thumb">
-                            <a href="shop.html">
+                            <a href="{{ url('Shop') }}">
                                 <img src="assets/img/category/category-2.png" alt="category thumb">
                             </a>
                         </div>
                         <div class="shop-collection text-center">
-                            <a class="shop-btn" href="shop.html">Shop Collections</a>
+                            <a class="shop-btn" href="{{ url('Shop') }}">Shop Collections</a>
                         </div>
                     </div>
                 </div>

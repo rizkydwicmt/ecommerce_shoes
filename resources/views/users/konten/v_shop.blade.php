@@ -285,7 +285,7 @@
                                                 <span class="price-old"><del>$90.00</del></span>
                                                 <span class="price-regular">$70.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -331,7 +331,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -363,7 +363,7 @@
                                                 <span class="price-old"><del>$85.00</del></span>
                                                 <span class="price-regular">$60.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -406,7 +406,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -438,7 +438,7 @@
                                                 <span class="price-old"><del>$70.00</del></span>
                                                 <span class="price-regular">$50.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -481,7 +481,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -515,7 +515,7 @@
                                             <div class="price-box">
                                                 <span class="price-regular">$70.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -557,7 +557,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -588,7 +588,7 @@
                                             <div class="price-box">
                                                 <span class="price-regular">$60.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -630,7 +630,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -662,7 +662,7 @@
                                                 <span class="price-old"><del>$80.00</del></span>
                                                 <span class="price-regular">$40.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -705,7 +705,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -737,7 +737,7 @@
                                                 <span class="price-old"><del>$90.00</del></span>
                                                 <span class="price-regular">$70.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -780,7 +780,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -815,7 +815,7 @@
                                                 <span class="price-old"><del>$40.00</del></span>
                                                 <span class="price-regular">$50.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -861,7 +861,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -892,7 +892,7 @@
                                             <div class="price-box">
                                                 <span class="price-regular">$60.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -934,7 +934,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -965,7 +965,7 @@
                                             <div class="price-box">
                                                 <span class="price-regular">$75.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -1007,7 +1007,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -1038,7 +1038,7 @@
                                             <div class="price-box">
                                                 <span class="price-regular">$70.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -1080,7 +1080,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
@@ -1111,7 +1111,7 @@
                                             <div class="price-box">
                                                 <span class="price-regular">$90.00</span>
                                             </div>
-                                            <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>
@@ -1153,7 +1153,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
                                             quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
                                         </p>
-                                        <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
