@@ -14,30 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 // users
-Route::get('/', function () {
-    return view('users/konten/v_home');
-});
-Route::get('/Contact', function () {
-    return view('users/konten/v_contact');
-});
+Route::get('/', 'users\home@show');
+Route::get('/Contact', 'users\contact@show');
 
-Route::get('/Shop', function () {
-    return view('users/konten/v_shop');
-});
-Route::get('/Product_detail', function () {
-    return view('users/konten/v_shop_detail');
-});
+Route::get('/Shop', 'users\shop@show');
+Route::get('/Product_detail', 'users\shop_detail@show');
 
-Route::get('/Cart', function () {
-    return view('users/konten/v_cart');
-});
-Route::get('/Checkout', function () {
-    return view('users/konten/v_checkout');
-});
+Route::get('/Cart', 'users\cart@show');
+Route::get('/Checkout', 'users\checkout@show');
 
-Route::get('/Account', function () {
-    return view('users/konten/v_login_register');
-});
-Route::get('/Profile', function () {
-    return view('users/konten/v_profile');
-});
+Route::get('/Account', 'users\login_register@show');
+Route::get('/Profile', 'users\profile@show');
