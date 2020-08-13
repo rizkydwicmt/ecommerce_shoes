@@ -14,4 +14,8 @@ class cart extends Controller
             );
         return view('users/konten/v_cart', $data);
     }
+
+    public function cekJson(Request $request){
+        echo json_encode($request->all());
+    }
 }

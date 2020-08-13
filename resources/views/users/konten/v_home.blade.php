@@ -192,7 +192,7 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
+                                <a href={{ Url('Shop') }}>
                                     <img src="assets/img/product/product-1.jpg" alt="product thumb">
                                 </a>
                                 <div class="button-group">
@@ -209,7 +209,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Quickiin Mens shoes</a>
+                                        <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$90.00</del></span>
@@ -231,7 +231,7 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
+                                <a href={{ Url('Shop') }}>
                                     <img src="assets/img/product/product-2.jpg" alt="product thumb">
                                 </a>
                                 <div class="button-group">
@@ -245,7 +245,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">New Womens High Hills</a>
+                                        <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$80.00</del></span>
@@ -267,7 +267,7 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
+                                <a href={{ Url('Shop') }}>
                                     <img src="assets/img/product/product-3.jpg" alt="product thumb">
                                 </a>
                                 <div class="button-group">
@@ -281,7 +281,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Leather Mens slippers</a>
+                                        <a href={{ Url('Shop') }}>Leather Mens slippers</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$60.00</del></span>
@@ -303,7 +303,7 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
+                                <a href={{ Url('Shop') }}>
                                     <img src="assets/img/product/product-4.jpg" alt="product thumb">
                                 </a>
                                 <div class="button-group">
@@ -320,7 +320,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Rexpo Womens shoes</a>
+                                        <a href={{ Url('Shop') }}>Rexpo Womens shoes</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$100.00</del></span>
@@ -342,7 +342,7 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
+                                <a href={{ Url('Shop') }}>
                                     <img src="assets/img/product/product-5.jpg" alt="product thumb">
                                 </a>
                                 <div class="button-group">
@@ -356,7 +356,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Primitive Mens shoes</a>
+                                        <a href={{ Url('Shop') }}>Primitive Mens shoes</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$75.00</del></span>
@@ -413,7 +413,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-1.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -430,7 +430,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$90.00</del></span>
@@ -452,7 +452,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-2.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -466,7 +466,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">New Womens High Hills</a>
+                                                    <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$80.00</del></span>
@@ -488,7 +488,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-3.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -502,7 +502,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Leather Mens slippers</a>
+                                                    <a href={{ Url('Shop') }}>Leather Mens slippers</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$60.00</del></span>
@@ -524,7 +524,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-4.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -541,7 +541,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Rexpo Womens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Rexpo Womens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$100.00</del></span>
@@ -563,7 +563,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-5.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -577,7 +577,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Primitive Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Primitive Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$75.00</del></span>
@@ -599,7 +599,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-6.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -613,7 +613,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$90.00</del></span>
@@ -635,7 +635,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-7.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -649,7 +649,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">New Womens High Hills</a>
+                                                    <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$80.00</del></span>
@@ -671,7 +671,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-8.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -688,7 +688,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Leather Mens slippers</a>
+                                                    <a href={{ Url('Shop') }}>Leather Mens slippers</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$60.00</del></span>
@@ -710,7 +710,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-9.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -727,7 +727,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$90.00</del></span>
@@ -749,7 +749,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-10.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -763,7 +763,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">New Womens High Hills</a>
+                                                    <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$80.00</del></span>
@@ -791,7 +791,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-10.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -805,7 +805,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$90.00</del></span>
@@ -827,7 +827,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-9.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -841,7 +841,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">New Womens High Hills</a>
+                                                    <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$80.00</del></span>
@@ -863,7 +863,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-8.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -877,7 +877,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Leather Mens slippers</a>
+                                                    <a href={{ Url('Shop') }}>Leather Mens slippers</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$60.00</del></span>
@@ -899,7 +899,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-7.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -916,7 +916,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Rexpo Womens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Rexpo Womens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$100.00</del></span>
@@ -938,7 +938,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-6.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -955,7 +955,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Primitive Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Primitive Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$75.00</del></span>
@@ -977,7 +977,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-5.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -991,7 +991,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$90.00</del></span>
@@ -1013,7 +1013,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-4.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1027,7 +1027,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">New Womens High Hills</a>
+                                                    <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$80.00</del></span>
@@ -1049,7 +1049,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-3.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1066,7 +1066,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Leather Mens slippers</a>
+                                                    <a href={{ Url('Shop') }}>Leather Mens slippers</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$60.00</del></span>
@@ -1088,7 +1088,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-2.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1105,7 +1105,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Rexpo Womens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Rexpo Womens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$100.00</del></span>
@@ -1127,7 +1127,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-1.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1141,7 +1141,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Primitive Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Primitive Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$75.00</del></span>
@@ -1169,7 +1169,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-2.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1186,7 +1186,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$90.00</del></span>
@@ -1208,7 +1208,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-4.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1222,7 +1222,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">New Womens High Hills</a>
+                                                    <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$80.00</del></span>
@@ -1244,7 +1244,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-6.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1258,7 +1258,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Leather Mens slippers</a>
+                                                    <a href={{ Url('Shop') }}>Leather Mens slippers</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$60.00</del></span>
@@ -1280,7 +1280,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-8.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1297,7 +1297,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Rexpo Womens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Rexpo Womens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$100.00</del></span>
@@ -1319,7 +1319,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-10.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1336,7 +1336,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Primitive Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Primitive Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$75.00</del></span>
@@ -1358,7 +1358,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-1.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1372,7 +1372,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Quickiin Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$90.00</del></span>
@@ -1394,7 +1394,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-3.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1408,7 +1408,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">New Womens High Hills</a>
+                                                    <a href={{ Url('Shop') }}>New Womens High Hills</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$80.00</del></span>
@@ -1430,7 +1430,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-5.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1447,7 +1447,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Leather Mens slippers</a>
+                                                    <a href={{ Url('Shop') }}>Leather Mens slippers</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$60.00</del></span>
@@ -1469,7 +1469,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-7.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1483,7 +1483,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Rexpo Womens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Rexpo Womens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$100.00</del></span>
@@ -1505,7 +1505,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
+                                            <a href={{ Url('Shop') }}>
                                                 <img src="assets/img/product/product-9.jpg" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -1519,7 +1519,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Primitive Mens shoes</a>
+                                                    <a href={{ Url('Shop') }}>Primitive Mens shoes</a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del>$75.00</del></span>

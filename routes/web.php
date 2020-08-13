@@ -26,6 +26,7 @@ Route::put('/Product_detail', 'users\shop_detail@get_barang');
 Route::post('/Product_detail/{id}', 'users\shop_detail@post_barang');
 
 Route::get('/Cart', 'users\cart@show');
+Route::put('/Cart', 'users\cart@cekJson');
 Route::get('/Checkout', 'users\checkout@show');
 
 Route::get('/Account', 'users\login_register@show');

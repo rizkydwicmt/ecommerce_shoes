@@ -77,55 +77,38 @@
                                         <li class="mini-cart-wrap">
                                             <a href="#" class="minicart-btn">
                                                 <i class="fa fa-shopping-cart"></i>
-                                                <span class="notification">2</span>
+                                                <span class="notification">
+                                                    @if(session('cart') !== null)
+                                                    {{ count(session('cart')) }}
+                                                    @endif
+                                                </span>
                                             </a>
                                             <div class="cart-list-wrapper">
+                                                @if(session('cart') !== null)
+                                                @foreach (session('cart') as $item)
                                                 <ul class="cart-list">
-                                                    <li>
+                                                    <li id='minicart_{{ $loop->iteration }}'>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="{{ asset('assets/img/cart/cart-1.jpg') }}" alt=""></a>
+                                                            <a href="{{ Url('Product_detail/'.$item['id_barang']) }}"><img src="{{ asset('assets/img/product/'.$item['gambar'] ) }}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
-                                                            <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>
-                                                            <span class="cart-qty">Qty: 1</span>
-                                                            <span class="item-price">$60.00</span>
+                                                            <h6 class="product-name"><a href="{{ Url('Product_detail/'.$item['id_barang']) }}">{{ $item['nama'].' '.$item['id_warna'].' '.$item['id_ukuran'] }}</a></h6>
+                                                            <span class="cart-qty">Qty: {{ $item['jumlah'] }}</span>
+                                                            <span class="item-price">{{ $item['harga'] }}</span>
                                                         </div>
                                                         <div class="del-icon">
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cart-img">
-                                                            <a href="product-details.html"><img src="{{ asset('assets/img/cart/cart-2.jpg') }}" alt=""></a>
-                                                        </div>
-                                                        <div class="cart-info">
-                                                            <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>
-                                                            <span class="cart-qty">Qty: 2</span>
-                                                            <span class="item-price">$70.00</span>
-                                                        </div>
-                                                        <div class="del-icon">
-                                                            <i class="fa fa-times"></i>
+                                                            <button type="button" onClick="remove_minicart('{{ $loop->iteration }}')"><i class="fa fa-times"></i></button>
                                                         </div>
                                                     </li>
                                                 </ul>
+                                                @endforeach
                                                 <ul class="minicart-pricing-box">
-                                                    <li>
-                                                        <span>Sub-Total</span>
-                                                        <span><strong>$300.00</strong></span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Eco Tax (-2.00)</span>
-                                                        <span><strong>$10.00</strong></span>
-                                                    </li>
-                                                    <li>
-                                                        <span>VAT (20%)</span>
-                                                        <span><strong>$60.00</strong></span>
-                                                    </li>
                                                     <li class="total">
                                                         <span>Total</span>
                                                         <span><strong>$370.00</strong></span>
                                                     </li>
                                                 </ul>
+                                                @endif
                                                 <div class="minicart-button">
                                                     <a href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i> View Cart</a>
                                                     <a href="{{ url('Checkout') }}"><i class="fa fa-share"></i> Checkout</a>

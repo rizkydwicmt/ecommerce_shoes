@@ -3,6 +3,9 @@
 @extends('users/core/footer')
 
 @section('title', 'Halaman Cart')
+@section('custom_style')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
 
 @section('konten')
     <!-- breadcrumb area start -->
@@ -30,18 +33,30 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                        $total = 0;
+                                    ?>
+                                    @if(session('cart') !== null)
                                     @foreach ($cart as $item)
-                                    <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="{{ url('assets/img/product/'.$item['gambar'] ) }}" alt="Product" /></a></td>
-                                        <td class="pro-title"><a href="#">{{ $item['nama'] }}</a></td>
-                                        <td class="pro-price"><span>{{ $item['harga'] }}</span></td>
+                                    <tr id="tr_{{ $loop->iteration }}">
+                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="{{ asset('assets/img/product/'.$item['gambar'] ) }}" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="{{ Url('Product_detail/'.$item['id_barang']) }}">{{ $item['nama'].' '.$item['id_warna'].' '.$item['id_ukuran'] }}</a></td>
+                                        <td class="pro-price"><span id='harga_{{ $loop->iteration }}'>{{ $item['harga'] }}</span></td>
                                         <td class="pro-quantity">
-                                            <div class="pro-qty"><input type="text" value="{{ $item['jumlah'] }}"></div>
+                                            <div><input type="number" value="{{ $item['jumlah'] }}" id="jumlah_{{ $loop->iteration }}" min="1" onChange="ganti_harga('{{ $loop->iteration }}')" style="width: 60px"></div>
                                         </td>
-                                        <td class="pro-subtotal"><span>{{ $item['harga']*$item['jumlah'] }}</span></td>
-                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td class="pro-subtotal">
+                                            <span id="subtotal_{{ $loop->iteration }}">
+                                            <?php
+                                                $total = $total+(int)$item['harga']*(int)$item['jumlah'];
+                                                echo $item['harga']*$item['jumlah'];
+                                            ?>
+                                            </span>
+                                        </td>
+                                        <td class="pro-remove"><button type="button" onClick="remove('{{ $loop->iteration }}')"><i class="fa fa-trash-o"></i></button></td>
                                     </tr>
                                     @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>
@@ -54,7 +69,7 @@
                                 </form>
                             </div>
                             <div class="cart-update">
-                                <a href="#" class="btn btn-sqr">Update Cart</a>
+                                <button class="btn btn-sqr" type="button" onClick="perbarui()">Update Cart</button>
                             </div>
                         </div>
                     </div>
@@ -69,7 +84,7 @@
                                     <table class="table">
                                         <tr class="total">
                                             <td>Total</td>
-                                            <td class="total-amount">$300</td>
+                                        <td class="total-amount" id="total">{{ $total }}</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -86,6 +101,66 @@
 
 @section('script_custom')
     <script>
-        
+        const token = $('meta[name="csrf-token"]').attr('content');
+        const url = '{{ url('Cart') }}';
+
+        function ganti_harga(id){
+            const jumlah = $("#jumlah_"+id).val();
+            const harga = parseInt($("#harga_"+id).html());
+            const subtotal = jumlah*harga;
+
+            $("#subtotal_"+id).html(subtotal);
+            ganti_total();
+        }
+
+        function ganti_total(){
+            let total = 0;
+
+            for (let i = 1; i <= ($('table tbody tr').length-1); i++) {
+                total += parseInt($("#subtotal_"+i).html());
+            }
+            // console.log(total);
+            $("#total").html(total);
+        }
+
+        function remove(id){
+            $("#tr_"+id).html('');
+        }
+
+        function remove_minicart(id){
+            $("#minicart_"+id).html('');
+        }
+
+        async function perbarui(){
+            var obj = JSON.stringify({
+                'row1' : {
+                    'key1' : 'input1',
+                    'key2' : 'input2'
+                },
+                'row2' : {
+                    'key3' : 'input3',
+                    'key4' : 'input4'
+                }
+            });
+            console.log(obj);
+            const barang = await fetch(url, 
+            {
+                method: 'PUT',
+                credentials: "same-origin",
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'X-CSRF-TOKEN': token,
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer',
+                body: obj,
+            })
+            .then(response => console.log('sukses'));
+
+            return barang;
+        }
     </script>
 @endsection

@@ -66,7 +66,7 @@
                                         <div class="quantity-cart-box d-flex align-items-center">
                                             <h6 class="option-title">qty:</h6>
                                             <div class="quantity">
-                                                <div class=""><input type="number" value="1" name="jumlah"  id='jumlah' onchange="ganti_harga()"></div>
+                                                <div class=""><input type="number" min="1" value="1" name="jumlah"  id='jumlah' onchange="ganti_harga()"></div>
                                             </div>
                                         </div>
                                         <div class="pro-size">
