@@ -3,10 +3,13 @@
 @extends('users/core/footer')
 
 @section('title', 'Halaman Shop')
+@section('custom_style')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
 
 @section('konten')
     <!-- breadcrumb area start -->
-    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg">
+    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{{ asset('assets/img/banner/shop.jpg') }}">
     </div>
     <!-- breadcrumb area end -->
 
@@ -18,81 +21,7 @@
                 <div class="col-lg-3 order-2 order-lg-1">
                     <aside class="sidebar-wrapper">
                         <!-- single sidebar start -->
-                        <div class="sidebar-single">
-                            <h6 class="sidebar-title">Categories</h6>
-                            <div class="sidebar-body">
-                                <ul class="checkbox-container search-list">
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                            <label class="custom-control-label" for="customCheck1">Mens (3)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                            <label class="custom-control-label" for="customCheck2">Womens (4)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                            <label class="custom-control-label" for="customCheck3">Kids (15)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                            <label class="custom-control-label" for="customCheck4">Sports (10)</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- single sidebar end -->
-
-                        <!-- single sidebar start -->
-                        <div class="sidebar-single">
-                            <h6 class="sidebar-title">Brand</h6>
-                            <div class="sidebar-body">
-                                <ul class="checkbox-container search-list">
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                            <label class="custom-control-label" for="customCheck5">Studio (3)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                            <label class="custom-control-label" for="customCheck6">Hastech (4)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                            <label class="custom-control-label" for="customCheck7">Quickiin (15)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                            <label class="custom-control-label" for="customCheck8">Graphic corner (10)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck9">
-                                            <label class="custom-control-label" for="customCheck9">devItems (12)</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- single sidebar end -->
-
-                        <!-- single sidebar start -->
-                        <div class="sidebar-single">
+                        {{-- <div class="sidebar-single">
                             <h6 class="sidebar-title">Categories</h6>
                             <div class="sidebar-body">
                                 <ul class="radio-container search-list">
@@ -102,70 +31,16 @@
                                             <label class="custom-control-label" for="customCheck50">$7.00 - $9.00 (2)</label>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input" id="customCheck51">
-                                            <label class="custom-control-label" for="customCheck51">$10.00 - $12.00 (3)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input" id="customCheck52">
-                                            <label class="custom-control-label" for="customCheck52">$17.00 - $20.00 (3)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input" id="customCheck53">
-                                            <label class="custom-control-label" for="customCheck53"> $21.00 - $22.00 (1)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input" id="customCheck54">
-                                            <label class="custom-control-label" for="customCheck54">$25.00 - $30.00 (3)</label>
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- single sidebar end -->
 
                         <!-- single sidebar start -->
                         <div class="sidebar-single">
                             <h6 class="sidebar-title">color</h6>
                             <div class="sidebar-body">
-                                <ul class="checkbox-container search-list">
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck11">
-                                            <label class="custom-control-label" for="customCheck11">green (5)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck12">
-                                            <label class="custom-control-label" for="customCheck12">black (20)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck13">
-                                            <label class="custom-control-label" for="customCheck13">red (6)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck14">
-                                            <label class="custom-control-label" for="customCheck14">blue (8)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck15">
-                                            <label class="custom-control-label" for="customCheck15">pink (4)</label>
-                                        </div>
-                                    </li>
+                                <ul class="checkbox-container search-list" id="warna">
                                 </ul>
                             </div>
                         </div>
@@ -175,42 +50,8 @@
                         <div class="sidebar-single">
                             <h6 class="sidebar-title">size</h6>
                             <div class="sidebar-body">
-                                <ul class="checkbox-container search-list">
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck111">
-                                            <label class="custom-control-label" for="customCheck111">S (4)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck222">
-                                            <label class="custom-control-label" for="customCheck222">M (5)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck333">
-                                            <label class="custom-control-label" for="customCheck333">L (7)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck444">
-                                            <label class="custom-control-label" for="customCheck444">XL (3)</label>
-                                        </div>
-                                    </li>
+                                <ul class="checkbox-container search-list" id='ukuran'>
                                 </ul>
-                            </div>
-                        </div>
-                        <!-- single sidebar end -->
-
-                        <!-- single sidebar start -->
-                        <div class="sidebar-banner">
-                            <div class="banner-thumb">
-                                <a href="#">
-                                    <img src="assets/img/banner/sidebar-banner.jpg" alt="">
-                                </a>
                             </div>
                         </div>
                         <!-- single sidebar end -->
@@ -258,98 +99,14 @@
                         <!-- product item list wrapper start -->
                         <div class="shop-product-wrap grid-view row mbn-30">
                             <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
+                            @foreach ($barang as $item)
+                            <div class="col-md-4 col-sm-6" id="barang_{{ $item->ID_BAR }}" >
                                 <!-- product grid start -->
                                 <div class="product-item">
                                     <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-1.jpg" alt="product thumb">
+                                        <a href="{{ url('Product_detail/'.$item->ID_BAR ) }}">
+                                            <img src="{{ url('assets/img/product/'.$item->FOTO_BAR ) }}" alt="product thumb">
                                         </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                        <div class="discount-label">
-                                            <span>-10% Off</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Quickiin Mens shoes</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$90.00</del></span>
-                                                <span class="price-regular">$70.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-1.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                        <div class="discount-label">
-                                            <span>-10% Off</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Quickiin Mens shoes</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-old"><del>$29.99</del></span>
-                                            <span class="price-regular">$50.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-2.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
                                         <div class="product-label">
                                             <span>new</span>
                                         </div>
@@ -357,808 +114,40 @@
                                     <div class="product-content">
                                         <div class="product-caption">
                                             <h6 class="product-name">
-                                                <a href="product-details.html">Womens High Hills</a>
+                                                <a href="{{ url('Product_detail/'.$item->ID_BAR) }}">{{ $item->NAMA_BAR }}</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-old"><del>$85.00</del></span>
-                                                <span class="price-regular">$60.00</span>
+                                                <span class="price-regular">{{ $item->HARGA_BAR }}</span>
                                             </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
+                                            <a class="add-to-cart" href="{{ url('Product_detail/'.$item->ID_BAR) }}"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- product grid end -->
-
-                                <!-- product list item end -->
+                                <!-- product list item start -->
                                 <div class="product-list-item">
                                     <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-2.jpg" alt="product thumb">
+                                        <a href="{{ url('Product_detail') }}">
+                                            <img src="{{ url('assets/img/product/'.$item->FOTO_BAR ) }}" alt="product thumb">
                                         </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
                                         <div class="product-label">
                                             <span>new</span>
                                         </div>
                                     </div>
                                     <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Womens High Hills</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
+                                        <h4 class="product-name"><a href="{{ url('Product_detail/'.$item->ID_BAR) }}">{{ $item->NAMA_BAR }}</a></h4>
                                         <div class="price-box">
-                                            <span class="price-old"><del>$85.00</del></span>
-                                            <span class="price-regular">$70.00</span>
+                                            <span class="price-regular">{{ $item->HARGA_BAR }}</span>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
+                                        <p>{{ $item->DESKRIPSI }}
                                         </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
+                                        <a href="{{ url('Product_detail/'.$item->ID_BAR) }}" class="btn btn-large hover-color">Add To Cart</a>
                                     </div>
                                 </div>
                                 <!-- product list item end -->
                             </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Leather Mens slippers</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$70.00</del></span>
-                                                <span class="price-regular">$50.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">QLeather Mens slippers</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-old"><del>$90</del></span>
-                                            <span class="price-regular">$60.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-4.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                        <div class="discount-label">
-                                            <span>-10% Off</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Rexpo Womens shoes</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-regular">$70.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-4.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Rexpo Womens shoes</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-regular">$70.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-5.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Primitive Mens shoes</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-regular">$60.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-5.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Primitive Mens shoes</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-regular">$60.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-6.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Quickiin Mens shoes</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$80.00</del></span>
-                                                <span class="price-regular">$40.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-6.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Quickiin Mens shoes</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-old"><del>$80.00</del></span>
-                                            <span class="price-regular">$40.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-7.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Womens High Hills</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$90.00</del></span>
-                                                <span class="price-regular">$70.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-7.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Womens High Hills</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-old"><del>$30.00</del></span>
-                                            <span class="price-regular">$25.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-8.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                        <div class="discount-label">
-                                            <span>-10% Off</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">LEATHER MENS SLIPPERS</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$40.00</del></span>
-                                                <span class="price-regular">$50.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-8.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                        <div class="discount-label">
-                                            <span>-10% Off</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">LEATHER MENS SLIPPERS</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-old"><del>$40.00</del></span>
-                                            <span class="price-regular">$50.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-9.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Womens High Hills</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-regular">$60.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-9.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Womens High Hills</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-regular">$60.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-10.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">Quickiin Mens shoes</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-regular">$75.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-10.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">Quickiin Mens shoes</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-regular">$55.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">LEATHER MENS SLIPPERS</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-regular">$70.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">LEATHER MENS SLIPPERS</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-regular">$50.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
-
-                            <!-- product single item start -->
-                            <div class="col-md-4 col-sm-6">
-                                <!-- product grid start -->
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-2.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-caption">
-                                            <h6 class="product-name">
-                                                <a href="product-details.html">REXPO WOMENS SHOES</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="price-regular">$90.00</span>
-                                            </div>
-                                            <a class="add-to-cart" href="{{ url('Cart') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- product grid end -->
-
-                                <!-- product list item end -->
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="assets/img/product/product-2.jpg" alt="product thumb">
-                                        </a>
-                                        <div class="button-group">
-                                            <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                            <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                        </div>
-                                        <div class="product-label">
-                                            <span>new</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-list">
-                                        <h4 class="product-name"><a href="product-details.html">REXPO WOMENS SHOES</a></h4>
-                                        <div class="ratings">
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                            <span><i class="fa fa-star"></i></span>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price-regular">$90.00</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                            quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                        </p>
-                                        <a href="{{ url('Cart') }}" class="btn btn-large hover-color">Add To Cart</a>
-                                    </div>
-                                </div>
-                                <!-- product list item end -->
-                            </div>
-                            <!-- product single item start -->
+                            @endforeach
+                            <!-- product single item end -->
                         </div>
                         <!-- product item list wrapper end -->
 
@@ -1167,8 +156,6 @@
                             <ul class="pagination-box">
                                 <li><a class="previous" href="#"><i class="fa fa-angle-left"></i></a></li>
                                 <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
                                 <li><a class="next" href="#"><i class="fa fa-angle-right"></i></a></li>
                             </ul>
                         </div>
@@ -1180,4 +167,118 @@
         </div>
     </div>
     <!-- page main wrapper end -->
+@endsection
+
+@section('script_custom')
+    <script>
+        const token = $('meta[name="csrf-token"]').attr('content');
+        const url = '{{ url('Shop') }}';
+        let val_ukuran = new Array();
+        let val_warna = new Array();
+
+        //warna
+        async function warna(id = null) {
+            const warna = await fetch(url+'/warna', 
+            {
+                method: 'PUT',
+                credentials: "same-origin",
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': token,
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer'
+            }).then(response => response.json());
+            return warna;
+        }
+
+        //ukuran
+        async function ukuran(id = null) {
+            const ukuran = await fetch(url+'/ukuran', 
+            {
+                method: 'PUT',
+                credentials: "same-origin",
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': token,
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer'
+            }).then(response => response.json());
+            return ukuran;
+        }
+
+        async function detail_barang(atribut, id) {
+            if(atribut === 'ukuran'){
+                if(document.getElementById("ukuran_"+id).checked){
+                    val_ukuran.push(id);
+                }else{
+                    while (val_ukuran.indexOf(id) !== -1) {
+                        val_ukuran.splice(val_ukuran.indexOf(id), 1);
+                    }
+                }
+            }else if(atribut === 'warna'){
+                if(document.getElementById("warna_"+id).checked){
+                    val_warna.push(id);
+                }else{
+                    while (val_warna.indexOf(id) !== -1) {
+                        val_warna.splice(val_warna.indexOf(id), 1);
+                    }
+                }
+            }
+            
+            // console.log(JSON.stringify({val_ukuran,val_warna}));
+
+            const resultFilter = await fetch(url+'/filter', 
+            {
+                method: 'PUT',
+                credentials: "same-origin",
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'X-CSRF-TOKEN': token,
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer',
+                body: JSON.stringify({val_ukuran,val_warna}),
+            }).then(response => response.json());
+
+            return resultFilter;
+        }
+
+        function Filter(atribut, id){
+            @foreach ($barang as $item)
+                $('#barang_{{ $item->ID_BAR }}').hide();
+            @endforeach
+
+            detail_barang(atribut, id).then(function(result) {
+                result.forEach(element => {
+                    $('#barang_'+element.ID_BAR).show();
+                });
+            });
+        }
+
+        warna().then(function(result) {
+            let html = '';
+            for(i=0; i<result.length; i++){
+                html += "<li><div class='custom-control custom-checkbox'><input type='checkbox' class='custom-control-input' name='cekWarna[]' onChange=\"Filter('warna','"+result[i].ID_WAR+"')\" id='warna_"+result[i].ID_WAR+"'><label class='custom-control-label' for='warna_"+result[i].ID_WAR+"'>"+result[i].WARNA+"</label></div></li>";
+            }
+            $('#warna').html(html);
+        });
+
+        ukuran().then(function(result) {
+            let html = '';
+            for(i=0; i<result.length; i++){
+                html += "<li><div class='custom-control custom-checkbox'><input type='checkbox' class='custom-control-input' name='cekUkuran[]' onChange=\"Filter('ukuran','"+result[i].ID_UK+"')\" id='ukuran_"+result[i].ID_UK+"'><label class='custom-control-label' for='ukuran_"+result[i].ID_UK+"'>"+result[i].UKURAN+"</label></div></li>";
+            }
+            $('#ukuran').html(html);
+        });
+
+    </script>
 @endsection

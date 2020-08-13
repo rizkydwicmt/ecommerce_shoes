@@ -90,7 +90,7 @@
                         <div class="address-block mt-30">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Brand Logo">
                                 </a>
                             </div>
                             <address class="address-info d-flex align-items-center">
@@ -119,7 +119,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="payment-method-list">
-                            <img src="assets/img/payment-2.png" alt="payment method">
+                            <img src="{{ asset('assets/img/payment-2.png') }}" alt="payment method">
                         </div>
                         <div class="footer-link">
                             <a href="#">SITE MAP</a>

@@ -6,7 +6,7 @@
 
 @section('konten')
     <!-- breadcrumb area start -->
-    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg"></div>
+    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{{ asset('assets/img/banner/shop.jpg') }}"></div>
     <!-- breadcrumb area end -->
 
     <!-- my account wrapper start -->
@@ -34,7 +34,7 @@
                                             Address</a>
                                         <a href="#account-info" data-toggle="tab"><i class="fa fa-user"></i> Account
                                             Details</a>
-                                        <a href="login-register.html"><i class="fa fa-sign-out"></i> Logout</a>
+                                        <a href="{{ url('Account') }}"><i class="fa fa-sign-out"></i> Logout</a>
                                     </div>
                                 </div>
                                 <!-- My Account Tab Menu End -->
@@ -48,7 +48,7 @@
                                                 <h5>Dashboard</h5>
                                                 <div class="welcome">
                                                     <p>Hello, <strong>Erik Jhonson</strong> (If Not <strong>Jhonson
-                                                        !</strong><a href="login-register.html" class="logout"> Logout</a>)</p>
+                                                        !</strong><a href="{{ url('Account') }}" class="logout"> Logout</a>)</p>
                                                 </div>
                                                 <p class="mb-0">From your account dashboard. you can easily check &
                                                     view your recent orders, manage your shipping and billing addresses

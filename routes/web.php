@@ -18,7 +18,11 @@ Route::get('/', 'users\home@show');
 Route::get('/Contact', 'users\contact@show');
 
 Route::get('/Shop', 'users\shop@show');
-Route::get('/Product_detail', 'users\shop_detail@show');
+Route::put('/Shop/filter', 'users\shop@filter');
+Route::put('/Shop/warna', 'users\shop@list_warna');
+Route::put('/Shop/ukuran', 'users\shop@list_ukuran');
+Route::get('/Product_detail/{id}', 'users\shop_detail@show');
+Route::get('/Product_detail/{atribut}/{id}', 'users\shop_detail@get_barang');
 
 Route::get('/Cart', 'users\cart@show');
 Route::get('/Checkout', 'users\checkout@show');

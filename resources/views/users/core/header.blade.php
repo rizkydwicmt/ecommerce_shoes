@@ -34,7 +34,7 @@
                         <div class="col-auto">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Brand Logo">
                                 </a>
                             </div>
                         </div>
@@ -47,11 +47,17 @@
                                     <!-- main menu navbar start -->
                                     <nav class="desktop-menu">
                                         <ul>
-                                            <li class="active"><a href="{{ url('/') }}">Home</a>
+                                            <li class="{{ 
+                                                Request::is('/') ? 'active' : '' 
+                                            }}"><a href="{{ url('/') }}">Home</a>
                                             </li>
-                                            <li><a href="{{ url('Shop') }}">shop</a>
+                                            <li class="{{ 
+                                                Request::is('Shop') ? 'active' : '' 
+                                            }}"><a href="{{ url('Shop') }}">shop</a>
                                             </li>
-                                            <li><a href="{{ url('Contact') }}">Contact us</a></li>
+                                            <li class="{{ 
+                                                Request::is('Contact') ? 'active' : '' 
+                                            }}"><a href="{{ url('Contact') }}">Contact us</a></li>
                                         </ul>
                                     </nav>
                                     <!-- main menu navbar end -->
@@ -77,7 +83,7 @@
                                                 <ul class="cart-list">
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{{ asset('assets/img/cart/cart-1.jpg') }}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>
@@ -90,7 +96,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{{ asset('assets/img/cart/cart-2.jpg') }}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>
@@ -149,7 +155,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -184,14 +190,6 @@
                 </div>
 
                 <div class="off-canvas-inner">
-                    <!-- search box start -->
-                    <div class="search-box-offcanvas">
-                        <form>
-                            <input type="text" placeholder="Search Here...">
-                            <button class="search-btn"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-                    <!-- search box end -->
 
                     <!-- mobile menu start -->
                     <div class="mobile-navigation">

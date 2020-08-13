@@ -6,7 +6,7 @@
 
 @section('konten')
     <!-- breadcrumb area start -->
-    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg">
+    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{{ asset('assets/img/banner/shop.jpg') }}">
     </div>
     <!-- breadcrumb area end -->
 
@@ -22,80 +22,73 @@
                             <div class="col-lg-5">
                                 <div class="product-large-slider">
                                     <div class="pro-large-img img-zoom">
-                                        <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img1.jpg') }}" alt="product-details" />
                                     </div>
                                     <div class="pro-large-img img-zoom">
-                                        <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img2.jpg') }}" alt="product-details" />
                                     </div>
                                     <div class="pro-large-img img-zoom">
-                                        <img src="assets/img/product/product-details-img3.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img3.jpg') }}" alt="product-details" />
                                     </div>
                                     <div class="pro-large-img img-zoom">
-                                        <img src="assets/img/product/product-details-img4.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img4.jpg') }}" alt="product-details" />
                                     </div>
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img1.jpg') }}" alt="product-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img2.jpg') }}" alt="product-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img3.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img3.jpg') }}" alt="product-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img4.jpg" alt="product-details" />
+                                        <img src="{{ asset('assets/img/product/product-details-img4.jpg') }}" alt="product-details" />
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="product-details-des">
-                                    <h3 class="product-name">Premium Mens Sports Lather Keds</h3>
-                                    <div class="ratings d-flex">
-                                        <span><i class="fa fa-star"></i></span>
-                                        <span><i class="fa fa-star"></i></span>
-                                        <span><i class="fa fa-star"></i></span>
-                                        <span><i class="fa fa-star"></i></span>
-                                        <span><i class="fa fa-star"></i></span>
-                                        <div class="pro-review">
-                                            <span>1 Reviews</span>
-                                        </div>
-                                    </div>
+                                    <h3 class="product-name">{{ $barang[0]->NAMA_BAR }}</h3>
                                     <div class="price-box">
-                                        <span class="price-old"><del>$90.00</del></span>
-                                        <span class="price-regular">$70.00</span>
+                                        <span class="price-regular">{{ $barang[0]->HARGA_BAR }}</span>
                                     </div>
-                                    <h5 class="offer-text"><strong>Hurry up</strong>! offer ends in:</h5>
-                                    <div class="product-countdown" data-countdown="2019/08/30"></div>
                                     <div class="availability">
                                         <i class="fa fa-check-circle"></i>
-                                        <span>200 in stock</span>
+                                        <span>{{ $barang[0]->STOCK_BAR }} in stock</span>
                                     </div>
-                                    <p class="pro-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                                        voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac
-                                        habitasse platea dictumst.</p>
+                                    <p class="pro-desc">{{ $barang[0]->DESKRIPSI }}</p>
                                     <div class="quantity-cart-box d-flex align-items-center">
                                         <h6 class="option-title">qty:</h6>
                                         <div class="quantity">
                                             <div class="pro-qty"><input type="text" value="1"></div>
                                         </div>
-                                        <div class="action_link">
-                                            <a class="btn btn-cart2" href="#">Add To Cart</a>
-                                        </div>
                                     </div>
                                     <div class="pro-size">
-                                        <h6 class="option-title">size :</h6>
-                                        <select class="nice-select">
-                                            <option>S</option>
-                                            <option>M</option>
-                                            <option>L</option>
-                                            <option>XL</option>
+                                        <h6 class="option-title">ukuran :</h6>
+                                        <select class="nice-select" id='ukuran'>
+                                            @foreach ($barang->unique('ID_UK') as $item)
+                                                <option value='{{ $item->ID_UK }}'>{{ $item->UKURAN }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="color-option">
-                                        <h6 class="option-title">color :</h6>
+                                        <h6 class="option-title">#Sementara warna :</h6>
+                                        <select class="nice-select" id='warna'>
+                                            @foreach ($barang->unique('ID_WAR') as $item)
+                                                <option value='{{ $item->ID_WAR }}'>{{ $item->WARNA }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="quantity-cart-box d-flex align-items-center">
+                                        <div class="action_link">
+                                            <button type="submit" class="btn btn-cart2">Add To Cart</button>
+                                        </div>
+                                    </div>
+                                    <div class="color-option">
+                                        <h6 class="option-title">#Hanya semple warna :</h6>
                                         <ul class="color-categories">
                                             <li>
                                                 <a class="c-lightblue" href="#" title="LightSteelblue"></a>
@@ -110,12 +103,6 @@
                                                 <a class="c-brown" href="#" title="Brown"></a>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <div class="useful-links">
-                                        <a href="#" data-toggle="tooltip" title="Compare"><i
-                                            class="fa fa-refresh"></i>compare</a>
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i
-                                            class="fa fa-heart-o"></i>wishlist</a>
                                     </div>
                                     <div class="like-icon">
                                         <a class="facebook" href="#"><i class="fa fa-facebook"></i>like</a>
@@ -148,16 +135,7 @@
                                     <div class="tab-content reviews-tab">
                                         <div class="tab-pane fade show active" id="tab_one">
                                             <div class="tab-one">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                                                    fringilla augue nec est tristique auctor. Ipsum metus feugiat
-                                                    sem, quis fermentum turpis eros eget velit. Donec ac tempus
-                                                    ante. Fusce ultricies massa massa. Fusce aliquam, purus eget
-                                                    sagittis vulputate, sapien libero hendrerit est, sed commodo
-                                                    augue nisi non neque.Cras neque metus, consequat et blandit et,
-                                                    luctus a nunc. Etiam gravida vehicula tellus, in imperdiet
-                                                    ligula euismod eget. Pellentesque habitant morbi tristique
-                                                    senectus et netus et malesuada fames ac turpis egestas. Nam
-                                                    erat mi, rutrum at sollicitudin rhoncus
+                                                <p>{{ $barang[0]->DESKRIPSI }}
                                                 </p>
                                             </div>
                                         </div>
@@ -166,11 +144,15 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>color</td>
-                                                        <td>black, blue, red</td>
+                                                        <td>@foreach ($barang as $item)
+                                                            {{ $item->WARNA.', ' }}
+                                                        @endforeach</td>
                                                     </tr>
                                                     <tr>
                                                         <td>size</td>
-                                                        <td>L, M, S</td>
+                                                        <td>@foreach ($barang as $item)
+                                                            {{ $item->UKURAN.', ' }}
+                                                        @endforeach</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -180,7 +162,7 @@
                                                 <h5>1 review for <span>Chaz Kangeroo</span></h5>
                                                 <div class="total-reviews">
                                                     <div class="rev-avatar">
-                                                        <img src="assets/img/about/avatar.jpg" alt="">
+                                                        <img src="{{ asset('assets/img/about/avatar.jpg') }}" alt="">
                                                     </div>
                                                     <div class="review-box">
                                                         <div class="ratings">
@@ -277,11 +259,11 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-1.jpg" alt="product thumb">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/product/product-1.jpg') }}" alt="product thumb">
                                 </a>
                                 <div class="button-group">
-                                    <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
                                     <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                 </div>
                                 <div class="product-label">
@@ -294,7 +276,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Quickiin Mens shoes</a>
+                                        <a href="#">Quickiin Mens shoes</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$90.00</del></span>
@@ -316,11 +298,11 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-2.jpg" alt="product thumb">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/product/product-2.jpg') }}" alt="product thumb">
                                 </a>
                                 <div class="button-group">
-                                    <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
                                     <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                 </div>
                                 <div class="product-label">
@@ -330,7 +312,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Womens High Hills</a>
+                                        <a href="#">Womens High Hills</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$80.00</del></span>
@@ -352,11 +334,11 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-3.jpg" alt="product thumb">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/product/product-3.jpg') }}" alt="product thumb">
                                 </a>
                                 <div class="button-group">
-                                    <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
                                     <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                 </div>
                                 <div class="product-label">
@@ -366,7 +348,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Leather Mens slippers</a>
+                                        <a href="#">Leather Mens slippers</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$60.00</del></span>
@@ -388,11 +370,11 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-4.jpg" alt="product thumb">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/product/product-4.jpg') }}" alt="product thumb">
                                 </a>
                                 <div class="button-group">
-                                    <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
                                     <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                 </div>
                                 <div class="product-label">
@@ -405,7 +387,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Rexpo Womens shoes</a>
+                                        <a href="#">Rexpo Womens shoes</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$100.00</del></span>
@@ -427,11 +409,11 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-5.jpg" alt="product thumb">
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/product/product-5.jpg') }}" alt="product thumb">
                                 </a>
                                 <div class="button-group">
-                                    <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
                                     <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                 </div>
                                 <div class="product-label">
@@ -441,7 +423,7 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html">Primitive Mens shoes</a>
+                                        <a href="#">Primitive Mens shoes</a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del>$75.00</del></span>
@@ -465,4 +447,28 @@
         </div>
     </section>
     <!-- Related product area end -->
+@endsection
+
+@section('script_custom')
+    <script>
+        const url = '{{ url('Product_detail') }}';
+        //barang
+        async function barang(atribut, id) {
+            const barang = await fetch(url+'/'+atribut+'/'+id, 
+            {
+                method: 'PUT',
+                credentials: "same-origin",
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': token,
+                },
+                redirect: 'follow',
+                referrerPolicy: 'no-referrer',
+            }).then(response => response.json());
+            return barang;
+        }
+
+    </script>
 @endsection

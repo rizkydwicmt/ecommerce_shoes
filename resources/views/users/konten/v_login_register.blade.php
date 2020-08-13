@@ -6,7 +6,7 @@
 
 @section('konten')
     <!-- breadcrumb area start -->
-    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg">
+    <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{{ asset('assets/img/banner/shop.jpg') }}">
     </div>
     <!-- breadcrumb area end -->
 
