@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// users
+/* Users */
 Route::get('/', 'users\home@show');
 Route::get('/Contact', 'users\contact@show');
 
@@ -39,3 +39,14 @@ Route::get('/Logout', function () {
 Route::get('/CekSession', function () {
     dd(Session::get('cart'));
 });
+
+/* Admin */
+
+/* Admin Login */
+Route::get('admin/Login', 'admin\AuthController@login');
+Route::post('admin/Login', 'admin\AuthController@cek_login');
+Route::get('admin/Logout', 'admin\AuthController@logout');
+/* Admin Dashboard */
+Route::get('admin', 'admin\AdminController@dashboard');
+Route::get('admin/List_Penjadwalan', 'admin\AdminController@list_penjadwalan');
+Route::get('admin/Kelola_Penjadwalan', 'admin\AdminController@kelola_penjadwalan');
