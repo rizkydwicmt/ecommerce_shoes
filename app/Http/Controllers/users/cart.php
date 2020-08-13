@@ -9,6 +9,9 @@ use App\Http\Controllers\Controller;
 class cart extends Controller
 {
     public function show(){
-        return view('users/konten/v_cart');
+        $data = array(
+                'cart' => session('cart'), 
+            );
+        return view('users/konten/v_cart', $data);
     }
 }

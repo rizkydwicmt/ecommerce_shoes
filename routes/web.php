@@ -22,10 +22,19 @@ Route::put('/Shop/filter', 'users\shop@filter');
 Route::put('/Shop/warna', 'users\shop@list_warna');
 Route::put('/Shop/ukuran', 'users\shop@list_ukuran');
 Route::get('/Product_detail/{id}', 'users\shop_detail@show');
-Route::get('/Product_detail/{atribut}/{id}', 'users\shop_detail@get_barang');
+Route::put('/Product_detail', 'users\shop_detail@get_barang');
+Route::post('/Product_detail/{id}', 'users\shop_detail@post_barang');
 
 Route::get('/Cart', 'users\cart@show');
 Route::get('/Checkout', 'users\checkout@show');
 
 Route::get('/Account', 'users\login_register@show');
 Route::get('/Profile', 'users\profile@show');
+
+Route::get('/Logout', function () {
+    Session::flush();
+});
+
+Route::get('/CekSession', function () {
+    dd(Session::get('cart'));
+});

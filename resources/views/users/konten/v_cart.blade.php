@@ -21,59 +21,27 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th class="pro-thumbnail">Thumbnail</th>
-                                        <th class="pro-title">Product</th>
-                                        <th class="pro-price">Price</th>
-                                        <th class="pro-quantity">Quantity</th>
+                                        <th class="pro-thumbnail">Gambar</th>
+                                        <th class="pro-title">Produk</th>
+                                        <th class="pro-price">Harga</th>
+                                        <th class="pro-quantity">Jumlah</th>
                                         <th class="pro-subtotal">Total</th>
                                         <th class="pro-remove">Remove</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($cart as $item)
                                     <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-1.jpg" alt="Product" /></a></td>
-                                        <td class="pro-title"><a href="#">PRIMITIVE MENS SHOES</a></td>
-                                        <td class="pro-price"><span>$295.00</span></td>
+                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="{{ url('assets/img/product/'.$item['gambar'] ) }}" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="#">{{ $item['nama'] }}</a></td>
+                                        <td class="pro-price"><span>{{ $item['harga'] }}</span></td>
                                         <td class="pro-quantity">
-                                            <div class="pro-qty"><input type="text" value="1"></div>
+                                            <div class="pro-qty"><input type="text" value="{{ $item['jumlah'] }}"></div>
                                         </td>
-                                        <td class="pro-subtotal"><span>$295.00</span></td>
+                                        <td class="pro-subtotal"><span>{{ $item['harga']*$item['jumlah'] }}</span></td>
                                         <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
                                     </tr>
-                                    <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-2.jpg" alt="Product" /></a></td>
-                                        <td class="pro-title"><a href="#">LEATHER MENS SLIPPERS</a></td>
-                                        <td class="pro-price"><span>$275.00</span></td>
-                                        <td class="pro-quantity">
-                                            <div class="pro-qty"><input type="text" value="2"></div>
-                                        </td>
-                                        <td class="pro-subtotal"><span>$550.00</span></td>
-                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-3.jpg" alt="Product" /></a></td>
-                                        <td class="pro-title"><a href="#">REXPO WOMENS SHOES</a></td>
-                                        <td class="pro-price"><span>$295.00</span></td>
-                                        <td class="pro-quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1" />
-                                            </div>
-                                        </td>
-                                        <td class="pro-subtotal"><span>$295.00</span></td>
-                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-4.jpg" alt="Product" /></a></td>
-                                        <td class="pro-title"><a href="#">QUICKIIN MENS SHOES</a></td>
-                                        <td class="pro-price"><span>$110.00</span></td>
-                                        <td class="pro-quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="3" />
-                                            </div>
-                                        </td>
-                                        <td class="pro-subtotal"><span>$110.00</span></td>
-                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -99,14 +67,6 @@
                                 <h6>Cart Totals</h6>
                                 <div class="table-responsive">
                                     <table class="table">
-                                        <tr>
-                                            <td>Sub Total</td>
-                                            <td>$230</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Shipping</td>
-                                            <td>$70</td>
-                                        </tr>
                                         <tr class="total">
                                             <td>Total</td>
                                             <td class="total-amount">$300</td>
@@ -122,4 +82,10 @@
         </div>
     </div>
     <!-- cart main wrapper end -->
+@endsection
+
+@section('script_custom')
+    <script>
+        
+    </script>
 @endsection

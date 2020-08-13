@@ -51,42 +51,50 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="product-details-des">
-                                    <h3 class="product-name">{{ $barang[0]->NAMA_BAR }}</h3>
-                                    <div class="price-box">
-                                        <span class="price-regular">{{ $barang[0]->HARGA_BAR }}</span>
-                                    </div>
-                                    <div class="availability">
-                                        <i class="fa fa-check-circle"></i>
-                                        <span>{{ $barang[0]->STOCK_BAR }} in stock</span>
-                                    </div>
-                                    <p class="pro-desc">{{ $barang[0]->DESKRIPSI }}</p>
-                                    <div class="quantity-cart-box d-flex align-items-center">
-                                        <h6 class="option-title">qty:</h6>
-                                        <div class="quantity">
-                                            <div class="pro-qty"><input type="text" value="1"></div>
+
+                                    <form action="{{ Url('Product_detail/'.$barang[0]->ID_BAR) }}" method="post">
+                                        @csrf
+                                        <h3 class="product-name" id='nama_barang'>{{ $barang[0]->NAMA_BAR }}</h3>
+                                        <div class="price-box">
+                                            <span class="price-regular" id='harga_barang'>{{ $barang[0]->HARGA_BAR }}</span>
                                         </div>
-                                    </div>
-                                    <div class="pro-size">
-                                        <h6 class="option-title">ukuran :</h6>
-                                        <select class="nice-select" id='ukuran'>
-                                            @foreach ($barang->unique('ID_UK') as $item)
-                                                <option value='{{ $item->ID_UK }}'>{{ $item->UKURAN }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="color-option">
-                                        <h6 class="option-title">#Sementara warna :</h6>
-                                        <select class="nice-select" id='warna'>
-                                            @foreach ($barang->unique('ID_WAR') as $item)
-                                                <option value='{{ $item->ID_WAR }}'>{{ $item->WARNA }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="quantity-cart-box d-flex align-items-center">
-                                        <div class="action_link">
-                                            <button type="submit" class="btn btn-cart2">Add To Cart</button>
+                                        <div class="availability">
+                                            <i class="fa fa-check-circle"></i>
+                                            <span id='stok'>{{ $barang[0]->STOCK_BAR }} in stock</span>
                                         </div>
-                                    </div>
+                                        <p class="pro-desc" id='deskripsi_barang'>{{ $barang[0]->DESKRIPSI }}</p>
+                                        <div class="quantity-cart-box d-flex align-items-center">
+                                            <h6 class="option-title">qty:</h6>
+                                            <div class="quantity">
+                                                <div class=""><input type="number" value="1" name="jumlah"  id='jumlah' onchange="ganti_harga()"></div>
+                                            </div>
+                                        </div>
+                                        <div class="pro-size">
+                                            <h6 class="option-title">ukuran :</h6>
+                                            <select class="" id='ukuran' name="ukuran" onChange="get_barang('ukuran')">
+                                                @foreach ($barang->unique('ID_UK') as $item)
+                                                    <option value='{{ $item->ID_UK }}'>{{ $item->UKURAN }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="color-option">
+                                            <h6 class="option-title">#Sementara warna :</h6>
+                                            <select class="" id='warna' name="warna" onChange="get_barang('warna')">
+                                                @foreach ($barang->unique('ID_WAR') as $item)
+                                                    <option value='{{ $item->ID_WAR }}'>{{ $item->WARNA }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <input type="hidden" name="gambar" value="{{ $barang[0]->FOTO_BAR }}">
+                                        <input type="hidden" name="harga" value="{{ $barang[0]->HARGA_BAR }}">
+                                        <input type="hidden" name="nama" value="{{ $barang[0]->NAMA_BAR }}">
+                                        <div class="quantity-cart-box d-flex align-items-center">
+                                            <div class="action_link">
+                                                <button type="submit" class="btn btn-cart2">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
                                     <div class="color-option">
                                         <h6 class="option-title">#Hanya semple warna :</h6>
                                         <ul class="color-categories">
@@ -452,9 +460,18 @@
 @section('script_custom')
     <script>
         const url = '{{ url('Product_detail') }}';
+        const token = $('[name="_token"]').val();
+        const id_barang = '{{ $barang[0]->ID_BAR }}';
+        const harga_barang = parseInt($('#harga_barang').html());
+        // console.log(token);
         //barang
-        async function barang(atribut, id) {
-            const barang = await fetch(url+'/'+atribut+'/'+id, 
+        async function get_barang(atribut) {
+            const id_ukuran = $('#ukuran').val();
+            const id_warna = $('#warna').val();
+            let html_ukuran = '';
+            let html_warna = '';
+
+            const barang = await fetch(url+'/', 
             {
                 method: 'PUT',
                 credentials: "same-origin",
@@ -462,12 +479,36 @@
                 cache: 'no-cache',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json',
                     'X-CSRF-TOKEN': token,
                 },
                 redirect: 'follow',
                 referrerPolicy: 'no-referrer',
-            }).then(response => response.json());
+                body: JSON.stringify({id_barang, id_ukuran, id_warna}),
+            })
+            .then(response => response.json())
+            .then(data => {
+                $('#stok').html(data['barang'][0].STOCK_BAR+' in stock');
+                if(atribut === 'warna'){
+                    data['ukuran'].forEach(element => {
+                        html_ukuran += "<option value='"+element.ID_UK+"'>"+element.UKURAN+"</option>";
+                    });
+                    $('#ukuran').html(html_ukuran);
+                    // console.log(html_ukuran);   
+                }else{
+                    data['warna'].forEach(element => {
+                        html_warna += "<option value='"+element.ID_WAR+"'>"+element.WARNA+"</option>";
+                    });
+                    $('#warna').html(html_warna);
+                    // console.log(html_warna);   
+                }
+            });
             return barang;
+        }
+
+        function ganti_harga(){
+            $('#harga_barang').html(harga_barang*parseInt($('#jumlah').val()));
+            console.log(harga_barang*parseInt($('#jumlah').val()));
         }
 
     </script>
